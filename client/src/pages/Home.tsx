@@ -41,12 +41,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-8">
-            <ProgressBar 
-              current={itemsReviewedToday} 
-              total={DAILY_GOAL} 
-              label="Daily Goal" 
-            />
+          <div className="mt-8 bg-white/50 border-2 border-primary/10 rounded-3xl p-6 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center text-primary">
+                <Trophy className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-muted-foreground font-bold text-sm uppercase tracking-wider">Cards Learned</p>
+                <p className="text-3xl font-display font-bold text-foreground">{stats?.totalLearned || 0}</p>
+              </div>
+            </div>
+            <div className="h-12 w-px bg-primary/10 mx-4" />
+            <div className="flex-1">
+              <p className="text-muted-foreground font-bold text-sm uppercase tracking-wider">Due for Review</p>
+              <p className="text-3xl font-display font-bold text-primary">{stats?.dueToday || 0}</p>
+            </div>
           </div>
         </div>
       </header>

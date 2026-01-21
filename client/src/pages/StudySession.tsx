@@ -94,10 +94,18 @@ export default function StudySession() {
   if (!sessionItems || sessionItems.length === 0) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <div className="text-center max-w-md">
-          <h2 className="text-2xl font-bold text-primary mb-2">All Caught Up!</h2>
-          <p className="text-muted-foreground mb-6">You have no cards due for review right now.</p>
-          <Button onClick={() => setLocation("/")}>Back to Home</Button>
+        <div className="text-center max-w-md bg-white p-10 rounded-3xl border-2 border-primary/10 shadow-xl">
+          <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="text-4xl">✨</span>
+          </div>
+          <h2 className="text-2xl font-display font-bold text-primary mb-2">Everything Reviewed!</h2>
+          <p className="text-muted-foreground mb-8 text-lg">You've gone through all available cards. We'll add more soon or check back later for reviews!</p>
+          <Button 
+            className="w-full h-14 text-lg rounded-2xl"
+            onClick={() => setLocation("/")}
+          >
+            Back to Home
+          </Button>
         </div>
       </div>
     );
