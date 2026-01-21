@@ -126,10 +126,6 @@ export class DatabaseStorage implements IStorage {
       .where(lt(userProgress.nextReviewDate, now));
 
     // For "New Today", we'd typically track how many new items were *started* today.
-    // Simpler approximation: fixed daily limit minus started today? 
-    // For now, let's just return how many new questions are *available* total, capped at daily limit logic in frontend/routes
-    // But per requirements, let's just show remaining new cards.
-    // We'll calculate this dynamically in the route or just return total available new.
     const [availableNew] = await db
       .select({ count: sql<number>`count(*)` })
       .from(questions)
@@ -139,7 +135,7 @@ export class DatabaseStorage implements IStorage {
     return {
       totalLearned: Number(learned.count),
       dueToday: Number(due.count),
-      newTodayRemaining: Math.min(3, Number(availableNew.count)) // Simplified daily limit logic
+      newTodayRemaining: Number(availableNew.count) // Show all available new questions
     };
   }
 }

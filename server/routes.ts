@@ -64,15 +64,11 @@ export async function registerRoutes(
   // Study Session: Get mixed batch of Due + New
   app.get(api.study.session.path, async (req, res) => {
     // 1. Get Due Items
-    const dueItems = await storage.getDueQuestions(20); // Cap at 20 reviews per batch
+    const dueItems = await storage.getDueQuestions(20); 
     
-    // 2. Get New Items (Daily limit is 3, but let's just fetch up to 3 available)
-    // In a real app, we'd check how many new items were already done today.
-    const newItems = await storage.getNewQuestions(3);
+    // 2. Get New Items (Show up to 10 new questions if available)
+    const newItems = await storage.getNewQuestions(10);
 
-    // 3. Combine and shuffle (optional shuffle, here we just append)
-    // Returning format: Question & { isNew: boolean, progress?: UserProgress }
-    
     const session = [
       ...dueItems.map(item => ({ ...item, isNew: false })),
       ...newItems.map(item => ({ ...item, isNew: true, progress: undefined }))
