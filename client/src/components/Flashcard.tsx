@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, X, RotateCw, ThumbsUp, HelpCircle } from "lucide-react";
+import { Check, X, RotateCw, ThumbsUp, HelpCircle, Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface FlashcardProps {
@@ -22,6 +22,18 @@ export function Flashcard({
 
   const handleFlip = () => setIsFlipped(!isFlipped);
 
+  const speak = (text: string) => {
+    if (!window.speechSynthesis) return;
+    
+    // Stop any current speech
+    window.speechSynthesis.cancel();
+    
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.9; // Slightly slower for clarity
+    window.speechSynthesis.speak(utterance);
+  };
+
   return (
     <div className="w-full max-w-lg mx-auto perspective-1000 min-h-[400px] relative flex flex-col">
       <div className="relative flex-1 cursor-pointer group" onClick={handleFlip}>
@@ -37,7 +49,16 @@ export function Flashcard({
             <div className="absolute top-6 left-6 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
               <HelpCircle className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground leading-tight">
+            
+            <button
+              onClick={(e) => { e.stopPropagation(); speak(question); }}
+              className="absolute top-6 right-6 w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-colors"
+              title="Listen to question"
+            >
+              <Volume2 className="w-5 h-5" />
+            </button>
+
+            <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground leading-tight px-4">
               {question}
             </h3>
             <p className="mt-8 text-muted-foreground text-sm font-bold uppercase tracking-wider animate-pulse">
@@ -52,8 +73,16 @@ export function Flashcard({
             <div className="absolute top-6 left-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/30">
               <Check className="w-6 h-6 stroke-[3px]" />
             </div>
+
+            <button
+              onClick={(e) => { e.stopPropagation(); speak(answer); }}
+              className="absolute top-6 right-6 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
+              title="Listen to answer"
+            >
+              <Volume2 className="w-5 h-5" />
+            </button>
             
-            <p className="text-xl md:text-2xl font-bold text-foreground/90 mb-4">
+            <p className="text-xl md:text-2xl font-bold text-foreground/90 mb-4 px-4">
               {answer}
             </p>
             

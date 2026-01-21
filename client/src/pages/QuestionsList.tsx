@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { ArrowLeft, Search, Filter } from "lucide-react";
+import { ArrowLeft, Search, Filter, Volume2 } from "lucide-react";
 import { useQuestions } from "@/hooks/use-study";
 import { Navigation } from "@/components/Navigation";
 import { cn } from "@/lib/utils";
@@ -9,6 +9,15 @@ export default function QuestionsList() {
   const { data: questions, isLoading } = useQuestions();
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const speak = (text: string) => {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  };
 
   const filteredQuestions = questions?.filter(q => {
     const matchesSearch = q.question.toLowerCase().includes(search.toLowerCase()) || 
@@ -110,19 +119,37 @@ export default function QuestionsList() {
                   )}
                 </div>
                 
-                <h3 className="text-lg font-bold text-foreground mb-3 leading-snug">
-                  {q.question}
-                </h3>
+                <div className="flex justify-between items-start gap-4 mb-3">
+                  <h3 className="text-lg font-bold text-foreground leading-snug">
+                    {q.question}
+                  </h3>
+                  <button
+                    onClick={() => speak(q.question)}
+                    className="p-2 bg-secondary/10 rounded-full text-secondary hover:bg-secondary hover:text-white transition-colors shrink-0"
+                    title="Speak question"
+                  >
+                    <Volume2 className="w-4 h-4" />
+                  </button>
+                </div>
                 
-                <div className="pl-4 border-l-4 border-primary/20">
-                  <p className="text-muted-foreground font-medium">
-                    {q.answer}
-                  </p>
-                  {q.translation && (
-                    <p className="mt-1 text-sm text-muted-foreground/70 italic">
-                      {q.translation}
+                <div className="flex justify-between items-start gap-4 pl-4 border-l-4 border-primary/20">
+                  <div className="flex-1">
+                    <p className="text-muted-foreground font-medium">
+                      {q.answer}
                     </p>
-                  )}
+                    {q.translation && (
+                      <p className="mt-1 text-sm text-muted-foreground/70 italic">
+                        {q.translation}
+                      </p>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => speak(q.answer)}
+                    className="p-1.5 bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors shrink-0"
+                    title="Speak answer"
+                  >
+                    <Volume2 className="w-3.5 h-3.5" />
+                  </button>
                 </div>
               </div>
             ))}
