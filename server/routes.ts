@@ -64,10 +64,10 @@ export async function registerRoutes(
   // Study Session: Get mixed batch of Due + New
   app.get(api.study.session.path, async (req, res) => {
     // 1. Get Due Items
-    const dueItems = await storage.getDueQuestions(20); 
+    const dueItems = await storage.getDueQuestions(100); 
     
-    // 2. Get New Items (Show up to 10 new questions if available)
-    const newItems = await storage.getNewQuestions(10);
+    // 2. Get New Items (Show up to 100 new questions if available)
+    const newItems = await storage.getNewQuestions(100);
 
     const session = [
       ...dueItems.map(item => ({ ...item, isNew: false })),
