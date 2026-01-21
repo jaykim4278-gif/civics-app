@@ -8,6 +8,7 @@ export const questions = pgTable("questions", {
   answer: text("answer").notNull(),
   translation: text("translation"), // Optional translation
   category: text("category").default("general"),
+  keywords: text("keywords"), // Store as JSON string: [{"word": "Constitution", "definition": "헌법"}, ...]
 });
 
 export const userProgress = pgTable("user_progress", {

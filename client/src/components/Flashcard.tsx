@@ -7,6 +7,7 @@ interface FlashcardProps {
   question: string;
   answer: string;
   translation?: string | null;
+  keywords?: string | null;
   onResult: (quality: number) => void;
   isSubmitting?: boolean;
 }
@@ -15,6 +16,7 @@ export function Flashcard({
   question, 
   answer, 
   translation, 
+  keywords,
   onResult, 
   isSubmitting = false 
 }: FlashcardProps) {
@@ -33,6 +35,8 @@ export function Flashcard({
     utterance.rate = 0.9; // Slightly slower for clarity
     window.speechSynthesis.speak(utterance);
   };
+
+  const parsedKeywords = keywords ? JSON.parse(keywords) as { word: string, definition: string }[] : [];
 
   return (
     <div className="w-full max-w-lg mx-auto perspective-1000 min-h-[400px] relative flex flex-col">
@@ -68,31 +72,60 @@ export function Flashcard({
 
           {/* Back of Card */}
           <div 
-            className="absolute inset-0 backface-hidden p-8 flex flex-col items-center justify-center text-center bg-primary/5 rounded-3xl rotate-y-180"
+            className="absolute inset-0 backface-hidden p-8 flex flex-col overflow-y-auto items-center justify-start text-center bg-primary/5 rounded-3xl rotate-y-180"
           >
-            <div className="absolute top-6 left-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/30">
+            <div className="absolute top-6 left-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/30 shrink-0">
               <Check className="w-6 h-6 stroke-[3px]" />
             </div>
 
             <button
               onClick={(e) => { e.stopPropagation(); speak(answer); }}
-              className="absolute top-6 right-6 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
+              className="absolute top-6 right-6 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors shrink-0"
               title="Listen to answer"
             >
               <Volume2 className="w-5 h-5" />
             </button>
             
-            <p className="text-xl md:text-2xl font-bold text-foreground/90 mb-4 px-4">
-              {answer}
-            </p>
-            
-            {translation && (
-              <div className="mt-6 pt-6 border-t border-primary/10 w-full">
-                <p className="text-lg text-muted-foreground italic font-medium">
-                  {translation}
-                </p>
-              </div>
-            )}
+            <div className="mt-16 w-full flex flex-col items-center">
+              <p className="text-xl md:text-2xl font-bold text-foreground/90 mb-4 px-4">
+                {answer}
+              </p>
+              
+              {translation && (
+                <div className="mt-4 pb-4 border-b border-primary/10 w-full px-8">
+                  <p className="text-lg text-muted-foreground italic font-medium">
+                    {translation}
+                  </p>
+                </div>
+              )}
+
+              {parsedKeywords.length > 0 && (
+                <div className="mt-6 w-full px-8 pb-8">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-primary/60 mb-3 flex items-center justify-center gap-2">
+                    <span className="w-4 h-px bg-primary/20"></span>
+                    📝 Core Vocabulary
+                    <span className="w-4 h-px bg-primary/20"></span>
+                  </h4>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {parsedKeywords.map((kw, i) => (
+                      <div 
+                        key={i}
+                        className="flex items-center gap-2 bg-white border border-primary/10 rounded-full py-1.5 pl-4 pr-2 shadow-sm"
+                      >
+                        <span className="font-bold text-sm text-foreground">{kw.word}</span>
+                        <span className="text-muted-foreground text-xs">{kw.definition}</span>
+                        <button
+                          onClick={(e) => { e.stopPropagation(); speak(kw.word); }}
+                          className="w-6 h-6 rounded-full hover:bg-primary/10 flex items-center justify-center text-primary/60 hover:text-primary transition-colors"
+                        >
+                          <Volume2 className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </motion.div>
       </div>

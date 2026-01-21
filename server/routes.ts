@@ -130,6 +130,44 @@ export async function registerRoutes(
   return httpServer;
 }
 
+// Simple internal helper to generate keywords from text using rules
+// In a full autonomous mode, we might use an LLM integration,
+// but for Fast mode we'll provide a pre-defined mapping for the sample questions.
+function generateKeywords(question: string, answer: string): string {
+  const dictionary: Record<string, string> = {
+    "supreme": "최고의",
+    "law": "법",
+    "constitution": "헌법",
+    "government": "정부",
+    "self-government": "자치 정부",
+    "words": "단어들",
+    "amendment": "수정안",
+    "change": "변화",
+    "bill of rights": "권리 장전",
+    "right": "권리",
+    "freedom": "자유",
+    "speech": "언론/연설",
+    "independence": "독립",
+    "announced": "발표했다",
+    "executive branch": "행정부",
+    "charge": "책임",
+    "president": "대통령",
+    "federal": "연방의",
+    "congress": "의회"
+  };
+
+  const combined = (question + " " + answer).toLowerCase();
+  const found: { word: string; definition: string }[] = [];
+  
+  Object.entries(dictionary).forEach(([word, definition]) => {
+    if (combined.includes(word) && found.length < 4) {
+      found.push({ word: word.charAt(0).toUpperCase() + word.slice(1), definition });
+    }
+  });
+
+  return JSON.stringify(found);
+}
+
 async function seedDatabase() {
   // Realistic sample of 2008 version US Civics Test questions
   const sampleQuestions = [
@@ -193,7 +231,10 @@ async function seedDatabase() {
       translation: "연방 법은 누가 만듭니까? - 의회",
       category: "System of Government"
     }
-  ];
+  ].map(q => ({
+    ...q,
+    keywords: generateKeywords(q.question, q.answer)
+  }));
 
   await storage.seedQuestions(sampleQuestions);
 }
