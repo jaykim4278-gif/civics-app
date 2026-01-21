@@ -137,6 +137,7 @@ export default function StudySession() {
               question={currentCard.question}
               answer={currentCard.answer}
               translation={currentCard.translation}
+              keywords={currentCard.keywords}
               onResult={handleResult}
               isSubmitting={isSubmitting}
             />

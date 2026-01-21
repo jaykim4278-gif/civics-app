@@ -138,9 +138,18 @@ export default function QuestionsList() {
                       {q.answer}
                     </p>
                     {q.translation && (
-                      <p className="mt-1 text-sm text-muted-foreground/70 italic">
+                      <p className="mt-1 text-sm text-muted-foreground/70 italic mb-2">
                         {q.translation}
                       </p>
+                    )}
+                    {q.keywords && (
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {(JSON.parse(q.keywords) as {word: string, definition: string}[]).map((kw, idx) => (
+                          <span key={idx} className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-primary/5 rounded-full text-[10px] font-bold text-primary/70 border border-primary/10">
+                            {kw.word}: {kw.definition}
+                          </span>
+                        ))}
+                      </div>
                     )}
                   </div>
                   <button
