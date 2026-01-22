@@ -168,7 +168,7 @@ async function seedDatabase() {
   const fs = await import("fs");
   const path = await import("path");
 
-  let questionsToSeed = [];
+  let questionsToSeed: any[] = [];
 
   try {
     console.log("Loading questions from file...");
