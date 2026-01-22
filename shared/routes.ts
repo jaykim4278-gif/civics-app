@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { questions, userProgress, insertQuestionSchema } from './schema';
+import { questions, userProgress, insertQuestionSchema } from './schema.js';
 
 export const api = {
   questions: {
