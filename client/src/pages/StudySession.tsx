@@ -11,7 +11,7 @@ export default function StudySession() {
   const [, setLocation] = useLocation();
   const { data: sessionItems, isLoading, error } = useStudySession();
   const { mutate: submitReview, isPending: isSubmitting } = useSubmitReview();
-  
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [completedCount, setCompletedCount] = useState(0);
 
@@ -20,9 +20,9 @@ export default function StudySession() {
 
   const handleResult = (quality: number) => {
     if (!sessionItems) return;
-    
+
     const currentItem = sessionItems[currentIndex];
-    
+
     submitReview({
       questionId: currentItem.id,
       quality,
@@ -68,7 +68,7 @@ export default function StudySession() {
   if (isFinished) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <motion.div 
+        <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-xl border-2 border-primary/10"
@@ -80,7 +80,7 @@ export default function StudySession() {
           <p className="text-muted-foreground mb-8 text-lg">
             You reviewed {completedCount} cards today. Great job keeping up with your daily goals.
           </p>
-          <Button 
+          <Button
             className="w-full h-14 text-lg rounded-2xl shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform"
             onClick={() => setLocation("/")}
           >
@@ -100,7 +100,7 @@ export default function StudySession() {
           </div>
           <h2 className="text-2xl font-display font-bold text-primary mb-2">Everything Reviewed!</h2>
           <p className="text-muted-foreground mb-8 text-lg">You've gone through all available cards. We'll add more soon or check back later for reviews!</p>
-          <Button 
+          <Button
             className="w-full h-14 text-lg rounded-2xl"
             onClick={() => setLocation("/")}
           >
@@ -117,15 +117,15 @@ export default function StudySession() {
     <div className="min-h-screen bg-background flex flex-col relative overflow-hidden">
       {/* Header */}
       <header className="px-4 py-4 md:py-6 flex items-center gap-4 max-w-4xl mx-auto w-full z-10">
-        <button 
+        <button
           onClick={handleQuit}
           className="p-2 -ml-2 text-muted-foreground hover:text-foreground rounded-full hover:bg-muted transition-colors"
         >
           <X className="w-6 h-6" />
         </button>
-        <ProgressBar 
-          current={currentIndex + 1} 
-          total={sessionItems.length} 
+        <ProgressBar
+          current={currentIndex + 1}
+          total={sessionItems.length}
           className="flex-1"
         />
       </header>
@@ -146,6 +146,7 @@ export default function StudySession() {
               answer={currentCard.answer}
               translation={currentCard.translation}
               keywords={currentCard.keywords}
+              vocabulary={currentCard.vocabulary}
               onResult={handleResult}
               isSubmitting={isSubmitting}
             />

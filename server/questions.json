@@ -1,0 +1,702 @@
+[
+    {
+        "id": 1,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What is the supreme law of the land?",
+        "answer": "the Constitution",
+        "translation": "이 나라의 최고 법은 무엇입니까? - 헌법"
+    },
+    {
+        "id": 2,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What does the Constitution do?",
+        "answer": "sets up the government, defines the government, protects basic rights of Americans",
+        "translation": "헌법은 무슨 역할을 합니까? - 정부를 구성하고, 정부를 규정하며, 미국인의 기본권을 보호합니다."
+    },
+    {
+        "id": 3,
+        "category": "American Government - Principles of American Democracy",
+        "question": "The idea of self-government is in the first three words of the Constitution. What are these words?",
+        "answer": "We the People",
+        "translation": "자치의 개념은 헌법의 처음 세 단어에 담겨 있습니다. 이 단어들은 무엇입니까? - 우리 국민 (We the People)"
+    },
+    {
+        "id": 4,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What is an amendment?",
+        "answer": "a change (to the Constitution) or an addition (to the Constitution)",
+        "translation": "수정조항이란 무엇입니까? - (헌법의) 수정 또는 추가"
+    },
+    {
+        "id": 5,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What do we call the first ten amendments to the Constitution?",
+        "answer": "the Bill of Rights",
+        "translation": "헌법의 첫 10개 수정조항을 무엇이라 부릅니까? - 권리장전 (Bill of Rights)"
+    },
+    {
+        "id": 6,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What is one right or freedom from the First Amendment?",
+        "answer": "speech, religion, assembly, press, or petition the government",
+        "translation": "수정조항 제1조의 권리 또는 자유 중 하나는 무엇입니까? - 언론, 종교, 집회, 출판, 또는 정부 청원의 자유"
+    },
+    {
+        "id": 7,
+        "category": "American Government - Principles of American Democracy",
+        "question": "How many amendments does the Constitution have?",
+        "answer": "twenty-seven (27)",
+        "translation": "헌법에는 몇 개의 수정조항이 있습니까? - 27개"
+    },
+    {
+        "id": 8,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What did the Declaration of Independence do?",
+        "answer": "announced our independence (from Great Britain)",
+        "translation": "독립선언서는 무엇을 했습니까? - (영국으로부터의) 독립을 선언했습니다."
+    },
+    {
+        "id": 9,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What are two rights in the Declaration of Independence?",
+        "answer": "life, liberty, pursuit of happiness",
+        "translation": "독립선언서에 있는 두 가지 권리는 무엇입니까? - 생명, 자유, 행복 추구"
+    },
+    {
+        "id": 10,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What is freedom of religion?",
+        "answer": "You can practice any religion, or not practice a religion.",
+        "translation": "종교의 자유란 무엇입니까? - 당신은 어떤 종교든지 믿을 수 있고, 또는 안 믿을 수도 있습니다."
+    },
+    {
+        "id": 11,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What is the economic system in the United States?",
+        "answer": "capitalist economy or market economy",
+        "translation": "미국의 경제 체제는 무엇입니까? - 자본주의 경제 또는 시장 경제"
+    },
+    {
+        "id": 12,
+        "category": "American Government - Principles of American Democracy",
+        "question": "What is the “rule of law”?",
+        "answer": "Everyone must follow the law. Leaders must obey the law. Government must obey the law. No one is above the law.",
+        "translation": "법의 지배란 무엇입니까? - 모든 사람은 법을 따라야 합니다. (누구도 법 위에 있지 않습니다.)"
+    },
+    {
+        "id": 13,
+        "category": "American Government - System of Government",
+        "question": "Name one branch or part of the government.",
+        "answer": "Congress, legislative, President, executive, the courts, or judicial",
+        "translation": "정부의 한 부서 또는 부분을 말하십시오. - 의회(입법부), 대통령(행정부), 법원(사법부)"
+    },
+    {
+        "id": 14,
+        "category": "American Government - System of Government",
+        "question": "What stops one branch of government from becoming too powerful?",
+        "answer": "checks and balances or separation of powers",
+        "translation": "정부의 한 부문이 너무 강력해지는 것을 막는 것은 무엇입니까? - 견제와 균형 또는 권력 분립"
+    },
+    {
+        "id": 15,
+        "category": "American Government - System of Government",
+        "question": "Who is in charge of the executive branch?",
+        "answer": "the President",
+        "translation": "행정부의 책임자는 누구입니까? - 대통령"
+    },
+    {
+        "id": 16,
+        "category": "American Government - System of Government",
+        "question": "Who makes federal laws?",
+        "answer": "Congress (Senate and House)",
+        "translation": "연방 법은 누가 만듭니까? - 의회 (상원과 하원)"
+    },
+    {
+        "id": 17,
+        "category": "American Government - System of Government",
+        "question": "What are the two parts of the U.S. Congress?",
+        "answer": "the Senate and House (of Representatives)",
+        "translation": "미국 의회의 두 부분은 무엇입니까? - 상원과 하원"
+    },
+    {
+        "id": 18,
+        "category": "American Government - System of Government",
+        "question": "How many U.S. Senators are there?",
+        "answer": "one hundred (100)",
+        "translation": "미국 상원의원은 몇 명입니까? - 100명"
+    },
+    {
+        "id": 19,
+        "category": "American Government - System of Government",
+        "question": "We elect a U.S. Senator for how many years?",
+        "answer": "six (6)",
+        "translation": "미국 상원의원은 몇 년 동안 선출됩니까? - 6년"
+    },
+    {
+        "id": 20,
+        "category": "American Government - System of Government",
+        "question": "Who is one of your state’s U.S. Senators now?",
+        "answer": "Answers will vary.",
+        "translation": "현재 당신의 주의 미국 상원의원 중 한 명은 누구입니까? - (거주지에 따라 답이 다릅니다)"
+    },
+    {
+        "id": 21,
+        "category": "American Government - System of Government",
+        "question": "The House of Representatives has how many voting members?",
+        "answer": "four hundred thirty-five (435)",
+        "translation": "하원의원 중 투표권이 있는 위원은 몇 명입니까? - 435명"
+    },
+    {
+        "id": 22,
+        "category": "American Government - System of Government",
+        "question": "We elect a U.S. Representative for how many years?",
+        "answer": "two (2)",
+        "translation": "미국 하원의원은 몇 년 동안 선출됩니까? - 2년"
+    },
+    {
+        "id": 23,
+        "category": "American Government - System of Government",
+        "question": "Name your U.S. Representative.",
+        "answer": "Answers will vary.",
+        "translation": "당신의 미국 하원의원을 말하십시오. - (거주지에 따라 답이 다릅니다)"
+    },
+    {
+        "id": 24,
+        "category": "American Government - System of Government",
+        "question": "Who does a U.S. Senator represent?",
+        "answer": "all people of the state",
+        "translation": "미국 상원의원은 누구를 대표합니까? - 그 주의 모든 주민"
+    },
+    {
+        "id": 25,
+        "category": "American Government - System of Government",
+        "question": "Why do some states have more Representatives than other states?",
+        "answer": "because of the state’s population",
+        "translation": "왜 어떤 주는 다른 주보다 하원의원이 더 많습니까? - 인구가 더 많기 때문입니다."
+    },
+    {
+        "id": 26,
+        "category": "American Government - System of Government",
+        "question": "We elect a President for how many years?",
+        "answer": "four (4)",
+        "translation": "대통령은 몇 년 동안 선출됩니까? - 4년"
+    },
+    {
+        "id": 27,
+        "category": "American Government - System of Government",
+        "question": "In what month do we vote for President?",
+        "answer": "November",
+        "translation": "대통령 선거는 몇 월에 합니까? - 11월"
+    },
+    {
+        "id": 28,
+        "category": "American Government - System of Government",
+        "question": "What is the name of the President of the United States now?",
+        "answer": "Visit uscis.gov for current name.",
+        "translation": "현재 미국 대통령의 이름은 무엇입니까? - (현재 대통령 이름)"
+    },
+    {
+        "id": 29,
+        "category": "American Government - System of Government",
+        "question": "What is the name of the Vice President of the United States now?",
+        "answer": "Visit uscis.gov for current name.",
+        "translation": "현재 미국 부통령의 이름은 무엇입니까? - (현재 부통령 이름)"
+    },
+    {
+        "id": 30,
+        "category": "American Government - System of Government",
+        "question": "If the President can no longer serve, who becomes President?",
+        "answer": "the Vice President",
+        "translation": "대통령이 더 이상 직무를 수행할 수 없으면, 누가 대통령이 됩니까? - 부통령"
+    },
+    {
+        "id": 31,
+        "category": "American Government - System of Government",
+        "question": "If both the President and the Vice President can no longer serve, who becomes President?",
+        "answer": "the Speaker of the House",
+        "translation": "대통령과 부통령이 모두 직무를 수행할 수 없으면, 누가 대통령이 됩니까? - 하원의장"
+    },
+    {
+        "id": 32,
+        "category": "American Government - System of Government",
+        "question": "Who is the Commander in Chief of the military?",
+        "answer": "the President",
+        "translation": "군의 최고 사령관은 누구입니까? - 대통령"
+    },
+    {
+        "id": 33,
+        "category": "American Government - System of Government",
+        "question": "Who signs bills to become laws?",
+        "answer": "the President",
+        "translation": "법안을 법률로 만들기 위해 누가 서명합니까? - 대통령"
+    },
+    {
+        "id": 34,
+        "category": "American Government - System of Government",
+        "question": "Who vetoes bills?",
+        "answer": "the President",
+        "translation": "누가 법안을 거부합니까? - 대통령"
+    },
+    {
+        "id": 35,
+        "category": "American Government - System of Government",
+        "question": "What does the President’s Cabinet do?",
+        "answer": "advises the President",
+        "translation": "대통령 내각은 무슨 일을 합니까? - 대통령에게 자문(조언)합니다."
+    },
+    {
+        "id": 36,
+        "category": "American Government - System of Government",
+        "question": "What are two Cabinet-level positions?",
+        "answer": "Secretary of Agriculture, Secretary of Commerce, Secretary of Defense, Secretary of Education, Secretary of Energy, Secretary of Health and Human Services, Secretary of Homeland Security, Secretary of Housing and Urban Development, Secretary of the Interior, Secretary of Labor, Secretary of State, Secretary of Transportation, Secretary of the Treasury, Secretary of Veterans Affairs, Attorney General, Vice President",
+        "translation": "내각 직책 두 가지는 무엇입니까? - (예: 국무부 장관, 교육부 장관 등)"
+    },
+    {
+        "id": 37,
+        "category": "American Government - System of Government",
+        "question": "What does the judicial branch do?",
+        "answer": "reviews laws, explains laws, resolves disputes, decides if a law goes against the Constitution",
+        "translation": "사법부는 무슨 일을 합니까? - 법률 검토, 법률 해석, 분쟁 해결"
+    },
+    {
+        "id": 38,
+        "category": "American Government - System of Government",
+        "question": "What is the highest court in the United States?",
+        "answer": "the Supreme Court",
+        "translation": "미국의 최고 법원은 무엇입니까? - 연방 대법원"
+    },
+    {
+        "id": 39,
+        "category": "American Government - System of Government",
+        "question": "How many justices are on the Supreme Court?",
+        "answer": "Visit uscis.gov for current number.",
+        "translation": "대법원에는 몇 명의 대법관이 있습니까? - (현재 대법관 수)"
+    },
+    {
+        "id": 40,
+        "category": "American Government - System of Government",
+        "question": "Who is the Chief Justice of the United States now?",
+        "answer": "Visit uscis.gov for current name.",
+        "translation": "현재 미국 대법원장은 누구입니까? - (현재 대법원장 이름)"
+    },
+    {
+        "id": 41,
+        "category": "American Government - System of Government",
+        "question": "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
+        "answer": "to print money, to declare war, to create an army, or to make treaties",
+        "translation": "헌법에 따라 일부 권한은 연방 정부에 있습니다. 연방 정부의 권한 중 하나는 무엇입니까? - 화폐 발행 (또는 전쟁 선포 등)"
+    },
+    {
+        "id": 42,
+        "category": "American Government - System of Government",
+        "question": "Under our Constitution, some powers belong to the states. What is one power of the states?",
+        "answer": "provide schooling and education, provide protection (police), provide safety (fire departments), give a driver’s license, or approve zoning and land use",
+        "translation": "헌법에 따라 일부 권한은 주 정부에 있습니다. 주 정부의 권한 중 하나는 무엇입니까? - 교육 제공, 운전면허 발급 등"
+    },
+    {
+        "id": 43,
+        "category": "American Government - System of Government",
+        "question": "Who is the Governor of your state now?",
+        "answer": "Answers will vary.",
+        "translation": "현재 당신이 거주하는 주의 주지사는 누구입니까? - (거주지에 따라 답이 다릅니다)"
+    },
+    {
+        "id": 44,
+        "category": "American Government - System of Government",
+        "question": "What is the capital of your state?",
+        "answer": "Answers will vary.",
+        "translation": "당신이 거주하는 주의 수도는 어디입니까? - (거주지에 따라 답이 다릅니다)"
+    },
+    {
+        "id": 45,
+        "category": "American Government - System of Government",
+        "question": "What are the two major political parties in the United States?",
+        "answer": "Democratic and Republican",
+        "translation": "미국의 두 주요 정당은 무엇입니까? - 민주당과 공화당"
+    },
+    {
+        "id": 46,
+        "category": "American Government - System of Government",
+        "question": "What is the political party of the President now?",
+        "answer": "Visit uscis.gov for current party.",
+        "translation": "현재 대통령의 소속 정당은 무엇입니까? - (현재 정당)"
+    },
+    {
+        "id": 47,
+        "category": "American Government - System of Government",
+        "question": "What is the name of the Speaker of the House of Representatives now?",
+        "answer": "Visit uscis.gov for current name.",
+        "translation": "현재 하원의장의 이름은 무엇입니까? - (현재 하원의장 이름)"
+    },
+    {
+        "id": 48,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "There are four amendments to the Constitution about who can vote. Describe one of them.",
+        "answer": "Citizens eighteen (18) and older (can vote). / You don’t have to pay (a poll tax) to vote. / Any citizen can vote. (Women and men can vote.) / A male citizen of any race (can vote).",
+        "translation": "헌법에는 투표 자격에 대한 4가지 수정조항이 있습니다. 그중 하나를 설명하십시오. - 18세 이상의 시민은 투표할 수 있습니다."
+    },
+    {
+        "id": 49,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "What is one responsibility that is only for United States citizens?",
+        "answer": "serve on a jury or vote in a federal election",
+        "translation": "미국 시민권자에게만 해당되는 의무 중 하나는 무엇입니까? - 배심원 활동 또는 연방 선거 투표"
+    },
+    {
+        "id": 50,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "Name one right only for United States citizens.",
+        "answer": "vote in a federal election or run for federal office",
+        "translation": "미국 시민권자만 가질 수 있는 권리 중 하나를 말하십시오. - 연방 선거 투표"
+    },
+    {
+        "id": 51,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "What are two rights of everyone living in the United States?",
+        "answer": "freedom of expression, freedom of speech, freedom of assembly, freedom to petition the government, freedom of religion, or the right to bear arms",
+        "translation": "미국에 거주하는 모든 사람이 누리는 두 가지 권리는 무엇입니까? - 표현의 자유, 언론의 자유 등"
+    },
+    {
+        "id": 52,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "What do we show loyalty to when we say the Pledge of Allegiance?",
+        "answer": "the United States or the flag",
+        "translation": "국기에 대한 맹세를 할 때 우리는 무엇에 충성을 표합니까? - 미국, 국기"
+    },
+    {
+        "id": 53,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "What is one promise you make when you become a United States citizen?",
+        "answer": "give up loyalty to other countries, defend the Constitution and laws of the United States, obey the laws of the United States, serve in the U.S. military (if needed), serve the nation (if needed), or be loyal to the United States",
+        "translation": "미국 시민이 될 때 하는 한 가지 약속은 무엇입니까? - 다른 나라에 대한 충성 포기 (또는 법 준수 등)"
+    },
+    {
+        "id": 54,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "How old do citizens have to be to vote for President?",
+        "answer": "eighteen (18) and older",
+        "translation": "대통령 선거에 투표하려면 몇 살이어야 합니까? - 18세 이상"
+    },
+    {
+        "id": 55,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "What are two ways that Americans can participate in their democracy?",
+        "answer": "vote, join a political party, help with a campaign, join a civic group, join a community group, give an elected official your opinion on an issue, call Senators and Representatives, publicly support or oppose an issue or policy, run for office, or write to a newspaper",
+        "translation": "미국인이 민주주의에 참여할 수 있는 두 가지 방법은 무엇입니까? - 투표, 정당 가입 등"
+    },
+    {
+        "id": 56,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "When is the last day you can send in federal income tax forms?",
+        "answer": "April 15",
+        "translation": "연방 소득세 신고서를 제출할 수 있는 마지막 날은 언제입니까? - 4월 15일"
+    },
+    {
+        "id": 57,
+        "category": "American Government - Rights and Responsibilities",
+        "question": "When must all men register for the Selective Service?",
+        "answer": "at age eighteen (18) / between eighteen (18) and twenty-six (26)",
+        "translation": "모든 남성은 언제 징병 등록을 해야 합니까? - 18세 (또는 18세에서 26세 사이)"
+    },
+    {
+        "id": 58,
+        "category": "American History - Colonial Period and Independence",
+        "question": "What is one reason colonists came to America?",
+        "answer": "freedom, political liberty, religious freedom, economic opportunity, practice their religion, or escape persecution",
+        "translation": "식민지 개척자들이 미국에 온 이유 중 하나는 무엇입니까? - 자유 (또는 종교의 자유, 경제적 기회 등)"
+    },
+    {
+        "id": 59,
+        "category": "American History - Colonial Period and Independence",
+        "question": "Who lived in America before the Europeans arrived?",
+        "answer": "American Indians or Native Americans",
+        "translation": "유럽인이 도착하기 전 미국에는 누가 살았습니까? - 아메리칸 인디언 (원주민)"
+    },
+    {
+        "id": 60,
+        "category": "American History - Colonial Period and Independence",
+        "question": "What group of people was taken to America and sold as slaves?",
+        "answer": "Africans or people from Africa",
+        "translation": "어떤 그룹의 사람들이 미국으로 끌려와 노예로 팔렸습니까? - 아프리카인"
+    },
+    {
+        "id": 61,
+        "category": "American History - Colonial Period and Independence",
+        "question": "Why did the colonists fight the British?",
+        "answer": "because of high taxes (taxation without representation), because the British army stayed in their houses (boarding, quartering), or because they didn’t have self-government",
+        "translation": "식민지 개척자들은 왜 영국과 싸웠습니까? - 높은 세금 때문에 (또는 자치권이 없어서)"
+    },
+    {
+        "id": 62,
+        "category": "American History - Colonial Period and Independence",
+        "question": "Who wrote the Declaration of Independence?",
+        "answer": "Thomas Jefferson",
+        "translation": "독립선언서는 누가 작성했습니까? - 토마스 제퍼슨"
+    },
+    {
+        "id": 63,
+        "category": "American History - Colonial Period and Independence",
+        "question": "When was the Declaration of Independence adopted?",
+        "answer": "July 4, 1776",
+        "translation": "독립선언서는 언제 채택되었습니까? - 1776년 7월 4일"
+    },
+    {
+        "id": 64,
+        "category": "American History - Colonial Period and Independence",
+        "question": "There were 13 original states. Name three.",
+        "answer": "New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina, Georgia",
+        "translation": "초기 13개 주가 있었습니다. 세 곳을 말하십시오. - 뉴햄프셔, 뉴욕, 뉴저지 등 (3개 선택)"
+    },
+    {
+        "id": 65,
+        "category": "American History - Colonial Period and Independence",
+        "question": "What happened at the Constitutional Convention?",
+        "answer": "The Constitution was written. / The Founding Fathers wrote the Constitution.",
+        "translation": "헌법 제정 회의에서는 무슨 일이 있었습니까? - 헌법이 작성되었습니다."
+    },
+    {
+        "id": 66,
+        "category": "American History - Colonial Period and Independence",
+        "question": "When was the Constitution written?",
+        "answer": "1787",
+        "translation": "헌법은 언제 작성되었습니까? - 1787년"
+    },
+    {
+        "id": 67,
+        "category": "American History - Colonial Period and Independence",
+        "question": "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+        "answer": "James Madison, Alexander Hamilton, John Jay, or Publius",
+        "translation": "연방주의자 논설은 헌법 통과를 지지했습니다. 저자 중 한 명을 말하십시오. - 제임스 매디슨 (또는 해밀턴, 제이)"
+    },
+    {
+        "id": 68,
+        "category": "American History - Colonial Period and Independence",
+        "question": "What is one thing Benjamin Franklin is famous for?",
+        "answer": "U.S. diplomat, oldest member of the Constitutional Convention, first Postmaster General of the United States, writer of “Poor Richard’s Almanac”, or started the first free libraries",
+        "translation": "벤자민 프랭클린이 유명한 이유 중 하나는 무엇입니까? - 미국 외교관 (또는 최고령 제헌의원 등)"
+    },
+    {
+        "id": 69,
+        "category": "American History - Colonial Period and Independence",
+        "question": "Who is the “Father of Our Country”?",
+        "answer": "George Washington",
+        "translation": "우리나라의 아버지는 누구입니까? - 조지 워싱턴"
+    },
+    {
+        "id": 70,
+        "category": "American History - Colonial Period and Independence",
+        "question": "Who was the first President?",
+        "answer": "George Washington",
+        "translation": "초대 대통령은 누구였습니까? - 조지 워싱턴"
+    },
+    {
+        "id": 71,
+        "category": "American History - 1800s",
+        "question": "What territory did the United States buy from France in 1803?",
+        "answer": "the Louisiana Territory",
+        "translation": "미국은 1803년에 프랑스로부터 어떤 영토를 구입했습니까? - 루이지애나 영토"
+    },
+    {
+        "id": 72,
+        "category": "American History - 1800s",
+        "question": "Name one war fought by the United States in the 1800s.",
+        "answer": "War of 1812, Mexican-American War, Civil War, or Spanish-American War",
+        "translation": "1800년대에 미국이 참전한 전쟁 중 하나를 말하십시오. - 1812년 전쟁, 남북전쟁 등"
+    },
+    {
+        "id": 73,
+        "category": "American History - 1800s",
+        "question": "Name the U.S. war between the North and the South.",
+        "answer": "the Civil War",
+        "translation": "미국 북부와 남부 사이의 전쟁 이름을 말하십시오. - 남북전쟁 (Civil War)"
+    },
+    {
+        "id": 74,
+        "category": "American History - 1800s",
+        "question": "Name one problem that led to the Civil War.",
+        "answer": "slavery, economic reasons, or states’ rights",
+        "translation": "남북전쟁의 원인이 된 문제 중 하나를 말하십시오. - 노예 제도"
+    },
+    {
+        "id": 75,
+        "category": "American History - 1800s",
+        "question": "What was one important thing that Abraham Lincoln did?",
+        "answer": "freed the slaves (Emancipation Proclamation), saved (or preserved) the Union, or led the United States during the Civil War",
+        "translation": "에이브러햄 링컨이 한 중요한 일 중 하나는 무엇입니까? - 노예 해방"
+    },
+    {
+        "id": 76,
+        "category": "American History - 1800s",
+        "question": "What did the Emancipation Proclamation do?",
+        "answer": "freed the slaves",
+        "translation": "노예 해방령은 무엇을 했습니까? - 노예를 해방시켰습니다."
+    },
+    {
+        "id": 77,
+        "category": "American History - 1800s",
+        "question": "What did Susan B. Anthony do?",
+        "answer": "fought for women’s rights or fought for civil rights",
+        "translation": "수잔 B. 앤서니는 무슨 일을 했습니까? - 여성의 권리를 위해 싸웠습니다."
+    },
+    {
+        "id": 78,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "Name one war fought by the United States in the 1900s.",
+        "answer": "World War I, World War II, Korean War, Vietnam War, or (Persian) Gulf War",
+        "translation": "1900년대에 미국이 참전한 전쟁 중 하나를 말하십시오. - 제1차 세계대전, 제2차 세계대전, 한국전쟁 등"
+    },
+    {
+        "id": 79,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "Who was President during World War I?",
+        "answer": "Woodrow Wilson",
+        "translation": "제1차 세계대전 당시 대통령은 누구였습니까? - 우드로 윌슨"
+    },
+    {
+        "id": 80,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "Who was President during the Great Depression and World War II?",
+        "answer": "Franklin Roosevelt",
+        "translation": "대공황과 제2차 세계대전 당시 대통령은 누구였습니까? - 프랭클린 루즈벨트"
+    },
+    {
+        "id": 81,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "Who did the United States fight in World War II?",
+        "answer": "Japan, Germany, and Italy",
+        "translation": "미국은 제2차 세계대전에서 누구와 싸웠습니까? - 일본, 독일, 이탈리아"
+    },
+    {
+        "id": 82,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "Before he was President, Eisenhower was a general. What war was he in?",
+        "answer": "World War II",
+        "translation": "대통령이 되기 전, 아이젠하워는 장군이었습니다. 그는 어떤 전쟁에 참전했습니까? - 제2차 세계대전"
+    },
+    {
+        "id": 83,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "During the Cold War, what was the main concern of the United States?",
+        "answer": "Communism",
+        "translation": "냉전 기간 동안 미국의 주된 관심사는 무엇이었습니까? - 공산주의"
+    },
+    {
+        "id": 84,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "What movement tried to end racial discrimination?",
+        "answer": "civil rights (movement)",
+        "translation": "인종 차별을 끝내려고 했던 운동은 무엇입니까? - 민권 운동"
+    },
+    {
+        "id": 85,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "What did Martin Luther King, Jr. do?",
+        "answer": "fought for civil rights or worked for equality for all Americans",
+        "translation": "마틴 루터 킹 주니어는 무슨 일을 했습니까? - 민권을 위해 싸웠습니다."
+    },
+    {
+        "id": 86,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "What major event happened on September 11, 2001, in the United States?",
+        "answer": "Terrorists attacked the United States.",
+        "translation": "2001년 9월 11일 미국에서 일어난 주요 사건은 무엇입니까? - 테러리스트들이 미국을 공격했습니다."
+    },
+    {
+        "id": 87,
+        "category": "American History - Recent American History and Other Important Historical Information",
+        "question": "Name one American Indian tribe in the United States.",
+        "answer": "Cherokee, Navajo, Sioux, Chippewa, Choctaw, Pueblo, Apache, Iroquois, Creek, Blackfeet, Seminole, Cheyenne, Arawak, Shawnee, Mohegan, Huron, Oneida, Lakota, Crow, Teton, Hopi, Inuit",
+        "translation": "미국의 아메리칸 인디언 부족 중 하나를 말하십시오. - 체로키, 나바호 등"
+    },
+    {
+        "id": 88,
+        "category": "Integrated Civics - Geography",
+        "question": "Name one of the two longest rivers in the United States.",
+        "answer": "Missouri (River) or Mississippi (River)",
+        "translation": "미국에서 가장 긴 두 강 중 하나를 말하십시오. - 미주리강, 미시시피강"
+    },
+    {
+        "id": 89,
+        "category": "Integrated Civics - Geography",
+        "question": "What ocean is on the West Coast of the United States?",
+        "answer": "Pacific (Ocean)",
+        "translation": "미국의 서해안에 있는 대양은 무엇입니까? - 태평양"
+    },
+    {
+        "id": 90,
+        "category": "Integrated Civics - Geography",
+        "question": "What ocean is on the East Coast of the United States?",
+        "answer": "Atlantic (Ocean)",
+        "translation": "미국의 동해안에 있는 대양은 무엇입니까? - 대서양"
+    },
+    {
+        "id": 91,
+        "category": "Integrated Civics - Geography",
+        "question": "Name one U.S. territory.",
+        "answer": "Puerto Rico, U.S. Virgin Islands, American Samoa, Northern Mariana Islands, or Guam",
+        "translation": "미국령 중 하나를 말하십시오. - 푸에르토리코 (또는 괌 등)"
+    },
+    {
+        "id": 92,
+        "category": "Integrated Civics - Geography",
+        "question": "Name one state that borders Canada.",
+        "answer": "Maine, New Hampshire, Vermont, New York, Pennsylvania, Ohio, Michigan, Minnesota, North Dakota, Montana, Idaho, Washington, or Alaska",
+        "translation": "캐나다와 국경을 접하고 있는 주 중 하나를 말하십시오. - 메인, 뉴욕 등"
+    },
+    {
+        "id": 93,
+        "category": "Integrated Civics - Geography",
+        "question": "Name one state that borders Mexico.",
+        "answer": "California, Arizona, New Mexico, or Texas",
+        "translation": "멕시코와 국경을 접하고 있는 주 중 하나를 말하십시오. - 캘리포니아, 텍사스 등"
+    },
+    {
+        "id": 94,
+        "category": "Integrated Civics - Geography",
+        "question": "What is the capital of the United States?",
+        "answer": "Washington, D.C.",
+        "translation": "미국의 수도는 어디입니까? - 워싱턴 D.C."
+    },
+    {
+        "id": 95,
+        "category": "Integrated Civics - Geography",
+        "question": "Where is the Statue of Liberty?",
+        "answer": "New York (Harbor) or Liberty Island",
+        "translation": "자유의 여신상은 어디에 있습니까? - 뉴욕 (항구)"
+    },
+    {
+        "id": 96,
+        "category": "Integrated Civics - Symbols",
+        "question": "Why does the flag have 13 stripes?",
+        "answer": "because there were 13 original colonies / because the stripes represent the original colonies",
+        "translation": "국기에는 왜 13개의 줄이 있습니까? - 초기 13개 식민지를 상징하기 때문입니다."
+    },
+    {
+        "id": 97,
+        "category": "Integrated Civics - Symbols",
+        "question": "Why does the flag have 50 stars?",
+        "answer": "because there is one star for each state / because each star represents a state / because there are 50 states",
+        "translation": "국기에는 왜 50개의 별이 있습니까? - 각 주마다 하나의 별이 있기 때문입니다. (50개의 주)"
+    },
+    {
+        "id": 98,
+        "category": "Integrated Civics - Symbols",
+        "question": "What is the name of the national anthem?",
+        "answer": "The Star-Spangled Banner",
+        "translation": "미국 국가의 이름은 무엇입니까? - 별이 빛나는 깃발 (The Star-Spangled Banner)"
+    },
+    {
+        "id": 99,
+        "category": "Integrated Civics - Holidays",
+        "question": "When do we celebrate Independence Day?",
+        "answer": "July 4",
+        "translation": "독립기념일은 언제 기념합니까? - 7월 4일"
+    },
+    {
+        "id": 100,
+        "category": "Integrated Civics - Holidays",
+        "question": "Name two national U.S. holidays.",
+        "answer": "New Year’s Day, Martin Luther King, Jr. Day, Presidents’ Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving, Christmas",
+        "translation": "미국의 공휴일 두 가지를 말하십시오. - 새해 첫날, 독립기념일, 크리스마스 등"
+    }
+]

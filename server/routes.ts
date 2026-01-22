@@ -28,7 +28,7 @@ function calculateSM2(
     } else {
       interval = Math.round(previousInterval * previousEaseFactor);
     }
-    
+
     reviewCount += 1;
   } else {
     reviewCount = 0;
@@ -47,7 +47,7 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  
+
   // === API Routes ===
 
   app.get(api.questions.list.path, async (req, res) => {
@@ -64,8 +64,8 @@ export async function registerRoutes(
   // Study Session: Get mixed batch of Due + New
   app.get(api.study.session.path, async (req, res) => {
     // 1. Get Due Items
-    const dueItems = await storage.getDueQuestions(100); 
-    
+    const dueItems = await storage.getDueQuestions(100);
+
     // 2. Get New Items (Show up to 100 new questions if available)
     const newItems = await storage.getNewQuestions(100);
 
@@ -80,10 +80,10 @@ export async function registerRoutes(
   // Submit Review
   app.post(api.study.review.path, async (req, res) => {
     const { questionId, quality } = api.study.review.input.parse(req.body);
-    
+
     // Get existing progress or defaults
     const currentProgress = await storage.getUserProgress(questionId);
-    
+
     const previousInterval = currentProgress?.interval ?? 0;
     const previousEaseFactor = currentProgress?.easeFactor ?? 2.5;
     const previousReviewCount = currentProgress?.reviewCount ?? 0;
@@ -154,7 +154,7 @@ function generateKeywords(question: string, answer: string): string {
 
   const combined = (question + " " + answer).toLowerCase();
   const found: { word: string; definition: string }[] = [];
-  
+
   Object.entries(dictionary).forEach(([word, definition]) => {
     if (combined.includes(word) && found.length < 4) {
       found.push({ word: word.charAt(0).toUpperCase() + word.slice(1), definition });
@@ -165,72 +165,60 @@ function generateKeywords(question: string, answer: string): string {
 }
 
 async function seedDatabase() {
-  // Realistic sample of 2008 version US Civics Test questions
-  const sampleQuestions = [
-    {
-      question: "What is the supreme law of the land?",
-      answer: "The Constitution",
-      translation: "이 땅의 최고 법은 무엇입니까? - 헌법",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "What does the Constitution do?",
-      answer: "Sets up the government",
-      translation: "헌법은 무슨 역할을 합니까? - 정부를 구성합니다",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "The idea of self-government is in the first three words of the Constitution. What are these words?",
-      answer: "We the People",
-      translation: "자치 정부의 이념은 헌법의 첫 세 단어에 있습니다. 이 단어들은 무엇입니까? - 우리 국민 (We the People)",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "What is an amendment?",
-      answer: "A change (to the Constitution)",
-      translation: "수정안(amendment)이란 무엇입니까? - (헌법의) 변화",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "What do we call the first ten amendments to the Constitution?",
-      answer: "The Bill of Rights",
-      translation: "헌법의 첫 10개 수정안을 무엇이라고 부릅니까? - 권리 장전 (The Bill of Rights)",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "What is one right or freedom from the First Amendment?",
-      answer: "Speech",
-      translation: "수정헌법 제1조에 있는 하나의 권리 또는 자유는 무엇입니까? - 언론의 자유",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "How many amendments does the Constitution have?",
-      answer: "Twenty-seven (27)",
-      translation: "헌법에는 몇 개의 수정안이 있습니까? - 27개",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "What did the Declaration of Independence do?",
-      answer: "Announced our independence (from Great Britain)",
-      translation: "독립 선언서는 무엇을 했습니까? - (영국으로부터의) 독립을 선언함",
-      category: "Principles of American Democracy"
-    },
-    {
-      question: "Who is in charge of the executive branch?",
-      answer: "The President",
-      translation: "행정부의 책임자는 누구입니까? - 대통령",
-      category: "System of Government"
-    },
-    {
-      question: "Who makes federal laws?",
-      answer: "Congress",
-      translation: "연방 법은 누가 만듭니까? - 의회",
-      category: "System of Government"
-    }
-  ].map(q => ({
-    ...q,
-    keywords: generateKeywords(q.question, q.answer)
-  }));
+  const fs = await import("fs");
+  const path = await import("path");
 
-  await storage.seedQuestions(sampleQuestions);
+  let questionsToSeed = [];
+
+  try {
+    const jsonPath = path.join(process.cwd(), "server", "questions.json");
+    console.log("Attempting to load questions from:", jsonPath);
+    console.log("Current working directory:", process.cwd());
+
+    if (fs.existsSync(jsonPath)) {
+      console.log("Found questions.json, loading questions from file...");
+      const fileContent = fs.readFileSync(jsonPath, "utf-8");
+      const jsonData = JSON.parse(fileContent);
+      console.log(`Successfully parsed ${jsonData.length} questions from file.`);
+
+      // Validate and map fields
+      questionsToSeed = jsonData.map((q: any) => ({
+        question: q.question,
+        answer: q.answer,
+        translation: q.translation,
+        category: q.category || "General",
+        keywords: generateKeywords(q.question, q.answer)
+      }));
+    } else {
+      console.error("questions.json NOT FOUND at:", jsonPath);
+    }
+  } catch (error) {
+    console.error("Failed to load questions.json:", error);
+  }
+
+  // Fallback to hardcoded if file load failed or empty (and only if we strictly want defaults)
+  // But here we'll prioritize the file. If file is missing/empty, we can use the old hardcoded list as backup.
+  if (questionsToSeed.length === 0) {
+    console.log("No questions loaded from file, using built-in defaults.");
+    questionsToSeed = [
+      {
+        question: "What is the supreme law of the land?",
+        answer: "The Constitution",
+        translation: "이 땅의 최고 법은 무엇입니까? - 헌법",
+        category: "Principles of American Democracy"
+      },
+      // ... (truncated for brevity, keeping just one for fallback logic validity)
+      {
+        question: "What does the Constitution do?",
+        answer: "Sets up the government",
+        translation: "헌법은 무슨 역할을 합니까? - 정부를 구성합니다",
+        category: "Principles of American Democracy"
+      }
+    ].map(q => ({
+      ...q,
+      keywords: generateKeywords(q.question, q.answer)
+    }));
+  }
+
+  await storage.seedQuestions(questionsToSeed);
 }

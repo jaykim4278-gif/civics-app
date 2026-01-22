@@ -11,7 +11,7 @@ export default function Home() {
 
   // Simulated daily goal (could be user setting later)
   const DAILY_GOAL = 10;
-  
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -88,7 +88,7 @@ export default function Home() {
                   <ArrowRight className="w-8 h-8 text-white" />
                 </div>
               </div>
-              
+
               {/* Decorative circle */}
               <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
             </motion.button>
@@ -97,34 +97,49 @@ export default function Home() {
 
         {/* Stats Grid */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <StatsCard 
-            label="Learned" 
-            value={stats?.totalLearned || 0} 
-            icon={Trophy} 
-            color="secondary" 
+          <StatsCard
+            label="Learned"
+            value={stats?.totalLearned || 0}
+            icon={Trophy}
+            color="secondary"
           />
-          <StatsCard 
-            label="Due Today" 
-            value={stats?.dueToday || 0} 
-            icon={Calendar} 
-            color="accent" 
+          <StatsCard
+            label="Due Today"
+            value={stats?.dueToday || 0}
+            icon={Calendar}
+            color="accent"
           />
         </section>
-        
+
         {/* Quick Links */}
         <section className="pt-4">
           <h3 className="text-lg font-bold text-foreground mb-4 px-2">Library</h3>
-          <div className="bg-white rounded-2xl border border-border overflow-hidden">
-            <Link href="/questions" className="flex items-center gap-4 p-4 hover:bg-muted/50 transition-colors">
-              <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
-                <BookOpen className="w-5 h-5" />
-              </div>
-              <div className="flex-1">
-                <h4 className="font-bold text-base">Browse All Questions</h4>
-                <p className="text-sm text-muted-foreground">View the complete list of 100 civics questions</p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground/50" />
-            </Link>
+          <div className="space-y-4">
+            <div className="bg-white rounded-2xl border border-border overflow-hidden">
+              <Link href="/questions" className="flex items-center gap-4 p-4 hover:bg-muted/50 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-base">Browse All Questions</h4>
+                  <p className="text-sm text-muted-foreground">View the complete list of 100 civics questions</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-muted-foreground/50" />
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-border overflow-hidden">
+              <Link href="/vocabulary" className="flex items-center gap-4 p-4 hover:bg-muted/50 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center">
+                  <div className="w-5 h-5 font-serif font-bold flex items-center justify-center">Aa</div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-base">Vocabulary List</h4>
+                  <p className="text-sm text-muted-foreground">Review key civics terms and definitions</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-muted-foreground/50" />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

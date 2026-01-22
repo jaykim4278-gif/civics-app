@@ -9,6 +9,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import StudySession from "@/pages/StudySession";
 import QuestionsList from "@/pages/QuestionsList";
+import Vocabulary from "@/pages/Vocabulary";
 
 function Router() {
   return (
@@ -16,7 +17,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/study" component={StudySession} />
       <Route path="/questions" component={QuestionsList} />
-      
+      <Route path="/vocabulary" component={Vocabulary} />
+
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
