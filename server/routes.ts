@@ -171,29 +171,22 @@ async function seedDatabase() {
   let questionsToSeed = [];
 
   try {
-    const jsonPath = path.join(process.cwd(), "server", "questions.json");
-    console.log("Attempting to load questions from:", jsonPath);
-    console.log("Current working directory:", process.cwd());
+    console.log("Loading questions from file...");
+    const { default: jsonData } = await import("./questions.json", {
+      with: { type: "json" }
+    });
+    console.log(`Successfully parsed ${jsonData.length} questions from file.`);
 
-    if (fs.existsSync(jsonPath)) {
-      console.log("Found questions.json, loading questions from file...");
-      const fileContent = fs.readFileSync(jsonPath, "utf-8");
-      const jsonData = JSON.parse(fileContent);
-      console.log(`Successfully parsed ${jsonData.length} questions from file.`);
-
-      // Validate and map fields
-      questionsToSeed = jsonData.map((q: any) => ({
-        question: q.question,
-        answer: q.answer,
-        translation: q.translation,
-        category: q.category || "General",
-        keywords: generateKeywords(q.question, q.answer)
-      }));
-    } else {
-      console.error("questions.json NOT FOUND at:", jsonPath);
-    }
+    // Validate and map fields
+    questionsToSeed = jsonData.map((q: any) => ({
+      question: q.question,
+      answer: q.answer,
+      translation: q.translation,
+      category: q.category || "General",
+      keywords: generateKeywords(q.question, q.answer)
+    }));
   } catch (error) {
-    console.error("Failed to load questions.json:", error);
+    console.error("Failed to load questions.json or file not found:", error);
   }
 
   // Fallback to hardcoded if file load failed or empty (and only if we strictly want defaults)
@@ -205,13 +198,6 @@ async function seedDatabase() {
         question: "What is the supreme law of the land?",
         answer: "The Constitution",
         translation: "이 땅의 최고 법은 무엇입니까? - 헌법",
-        category: "Principles of American Democracy"
-      },
-      // ... (truncated for brevity, keeping just one for fallback logic validity)
-      {
-        question: "What does the Constitution do?",
-        answer: "Sets up the government",
-        translation: "헌법은 무슨 역할을 합니까? - 정부를 구성합니다",
         category: "Principles of American Democracy"
       }
     ].map(q => ({
