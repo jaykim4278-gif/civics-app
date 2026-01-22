@@ -1,9 +1,9 @@
 import type { Express } from "express";
 import type { Server } from "http";
 import { storage } from "./storage.js";
-import { api } from "@shared/routes";
+import { api } from "../shared/routes.js";
 import { z } from "zod";
-import { questions as questionsSchema } from "@shared/schema"; // For typing if needed
+import { questions as questionsSchema } from "../shared/schema.js"; // For typing if needed
 import { addDays, addMinutes } from "date-fns";
 
 // SM-2 Algorithm Implementation

@@ -6,7 +6,7 @@ import {
   type InsertQuestion,
   type UserProgress,
   type InsertUserProgress,
-} from "@shared/schema";
+} from "../shared/schema.js";
 import { eq, and, lt, isNull, desc, asc, sql } from "drizzle-orm";
 
 export interface IStorage {
