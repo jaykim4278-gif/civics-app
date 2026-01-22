@@ -1,4 +1,4 @@
-import { db } from "./db";
+import { db } from "./db.js";
 import {
   questions,
   userProgress,
@@ -19,7 +19,7 @@ export interface IStorage {
   // Progress / Study Logic
   getUserProgress(questionId: number): Promise<UserProgress | undefined>;
   updateUserProgress(progress: InsertUserProgress): Promise<UserProgress>;
-  
+
   // Advanced Queries for Session
   getDueQuestions(limit?: number): Promise<(Question & { progress: UserProgress })[]>;
   getNewQuestions(limit?: number): Promise<Question[]>;
@@ -59,7 +59,7 @@ export class DatabaseStorage implements IStorage {
   async updateUserProgress(progress: InsertUserProgress): Promise<UserProgress> {
     // Upsert logic (PostgreSQL specific usually, but here handled via check)
     const existing = await this.getUserProgress(progress.questionId);
-    
+
     if (existing) {
       const [updated] = await db
         .update(userProgress)
@@ -100,7 +100,7 @@ export class DatabaseStorage implements IStorage {
     // Find questions that DO NOT have a userProgress entry
     // Drizzle doesn't have a simple "NOT IN" or "LEFT JOIN ... IS NULL" builder that is super concise,
     // so we'll do a left join and filter for null right side.
-    
+
     const results = await db
       .select({
         question: questions,
@@ -117,7 +117,7 @@ export class DatabaseStorage implements IStorage {
   async getStudyStats() {
     // Count learned items (where progress exists)
     const [learned] = await db.select({ count: sql<number>`count(*)` }).from(userProgress);
-    
+
     // Count due items
     const now = new Date();
     const [due] = await db
