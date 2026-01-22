@@ -8,9 +8,7 @@
     ],
     "functions": {
         "api/index.ts": {
-            "includeFiles": [
-                "server/public/**"
-            ]
+            "includeFiles": "server/public/**"
         }
     }
 }
