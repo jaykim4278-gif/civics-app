@@ -1,20 +1,16 @@
 {
     "version": 2,
-    "builds": [
+    "rewrites": [
         {
-            "src": "server/index.ts",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": [
-                    "server/public/**"
-                ]
-            }
+            "source": "/(.*)",
+            "destination": "/api/index"
         }
     ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "server/index.ts"
+    "functions": {
+        "api/index.ts": {
+            "includeFiles": [
+                "server/public/**"
+            ]
         }
-    ]
+    }
 }
